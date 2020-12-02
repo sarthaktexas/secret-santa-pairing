@@ -1,0 +1,33 @@
+{
+  "name": "secret-santa-pairing",
+  "version": "1.0.0",
+  "description": "Pair users with other users for secret santa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthaktexas/secret-santa-pairing.git"
+  },
+  "keywords": [
+    "secret",
+    "santa",
+    "pairing",
+    "algorithm",
+    "christmas",
+    "gift"
+  ],
+  "author": "Sarthak Mohanty <sarthaktexas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarthaktexas/secret-santa-pairing/issues"
+  },
+  "homepage": "https://github.com/sarthaktexas/secret-santa-pairing#readme",
+  "dependencies": {
+    "airtable-plus": "^1.0.4",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0"
+  }
+}
