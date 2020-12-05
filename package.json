@@ -27,6 +27,7 @@
   "homepage": "https://github.com/sarthaktexas/secret-santa-pairing#readme",
   "dependencies": {
     "airtable-plus": "^1.0.4",
+    "axios": "^0.21.0",
     "colors": "^1.4.0",
     "dotenv": "^8.2.0"
   }
