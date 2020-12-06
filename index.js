@@ -26,14 +26,15 @@ const regions = [
 /**
  * Main Function, yes i know bad code whatever
  */
-const main = async () => {
+const main = () => {
   // gets gifters from each area
   regions.forEach(region => {
-    await getUsers(region).then(users => PairUsers(users));
+    getUsers(region).then(users => PairUsers(users));
   });
+  console.log(`I've finished matching everybody. Happy Gifting!`.bgCyan.black);
 }
 
-main().then(() => console.log(`I've finished matching everybody. Happy Gifting!`.bgCyan.black)); // run the app
+main(); // run the app
 
 /**
  * Gets Gifters from Airtable
@@ -65,10 +66,10 @@ function PairUsers(users) {
     let user_2;
     if (i !== users.length - 1) {
       user_2 = users[i + 1];
-      console.log(`I'm pairing ${(user_1.id).red} (${user_1.region.gray}) with ${(user_2.id).green} (${user_2.region.gray})`);
+      // console.log(`I'm pairing ${(user_1.id).red} (${user_1.region.gray}) with ${(user_2.id).green} (${user_2.region.gray})`);
     } else {
       user_2 = users[0];
-      console.log(`I'm pairing ${(user_1.id).red} (${user_1.region.gray}) with ${(user_2.id).green} (${user_2.region.gray})`)
+      // console.log(`I'm pairing ${(user_1.id).red} (${user_1.region.gray}) with ${(user_2.id).green} (${user_2.region.gray})`)
     }
     const matchRecord = await matchingTable.create({ id: user_1.id, match: user_2.id, regionmatch: user_1.region === user_2.region ? true : false, region: user_1.region }).catch(err => console.log(err));
     const webhookLink = process.env.SLACK_WORKFLOW_URL;
