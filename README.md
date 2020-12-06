@@ -13,7 +13,7 @@ $ npm start
 ## Environment Variables
 > You can copy `.env.example` and rename it to `.env` and add the following
 - `AIRTABLE_API_KEY` : your airtable api key, find yours in the settings tab in airtable.
-- `AIRTABLE_BASE_ID` : your airtbale base id, find yours at https://airtable.com/api; select your base, and the baseID should be listed.
+- `AIRTABLE_BASE_ID` : your airtable base id, find yours at https://airtable.com/api; select your base, and the baseID should be listed.
 - `SLACK_WORKFLOW_URL` : the url from the first slack workflow as mentioned below
 
 ## `regions` array struct
