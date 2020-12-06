@@ -65,7 +65,7 @@ function PairUsers(users) {
       console.log(`I'm pairing ${(user_1.id).red} (${user_1.region.gray}) with ${(user_2.id).green} (${user_2.region.gray})`)
     }
     const matchRecord = await matchingTable.create({ id: user_1.id, match: user_2.id, regionmatch: user_1.region === user_2.region ? true : false, region: user_1.region }).catch(err => console.log(err));
-    const webhookLink = "https://hooks.slack.com/workflows/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"
+    const webhookLink = process.env.SLACK_WORKFLOW_URL;
     axios({
       method: 'post',
       url: webhookLink,

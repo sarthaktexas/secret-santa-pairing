@@ -1,8 +1,19 @@
 # secret-santa-pairing
 This grabs data from an airtable form and pairs every person with somebody.
 
+## Setup
+install packages:
+```bash
+$ npm install
+```
+when you need to run, just run:
+```bash
+$ npm start
+```
 ## Environment Variables
+> You can copy `.env.example` and rename it to `.env` and add the following
 - `AIRTABLE_API_KEY` : your airtable api key, find yours in the settings tab in airtable.
+- `SLACK_WORKFLOW_URL` : the url from the first slack workflow as mentioned below
 
 ## `users` array struct
 ```js
