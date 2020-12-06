@@ -3,28 +3,34 @@ require('colors');
 const axios = require('axios');
 const AirtablePlus = require('airtable-plus');
 const usersTable = new AirtablePlus({
-  baseID: 'appErDYUv6Oppe9Cc',
+  baseID: process.env.AIRTABLE_BASE_ID,
   apiKey: process.env.AIRTABLE_API_KEY,
   tableName: 'Users',
 });
 
 const matchingTable = new AirtablePlus({
-  baseID: 'appErDYUv6Oppe9Cc',
+  baseID: process.env.AIRTABLE_BASE_ID,
   apiKey: process.env.AIRTABLE_API_KEY,
   tableName: 'Matching',
 });
+
+const regions = [
+  'North America',
+  'South America',
+  'Europe',
+  'India',
+  'Asia except India',
+  'Africa',
+]
 
 /**
  * Main Function, yes i know bad code whatever
  */
 const main = async () => {
   // gets gifters from each area
-  await getUsers('North America').then(users => PairUsers(users));
-  await getUsers('South America').then(users => PairUsers(users));
-  await getUsers('Europe').then(users => PairUsers(users));
-  await getUsers('India').then(users => PairUsers(users));
-  await getUsers('Asia except India').then(users => PairUsers(users));
-  await getUsers('Africa').then(users => PairUsers(users));
+  regions.forEach(region => {
+    await getUsers(region).then(users => PairUsers(users));
+  });
 }
 
 main().then(() => console.log(`I've finished matching everybody. Happy Gifting!`.bgCyan.black)); // run the app

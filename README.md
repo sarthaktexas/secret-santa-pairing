@@ -13,7 +13,18 @@ $ npm start
 ## Environment Variables
 > You can copy `.env.example` and rename it to `.env` and add the following
 - `AIRTABLE_API_KEY` : your airtable api key, find yours in the settings tab in airtable.
+- `AIRTABLE_BASE_ID` : your airtbale base id, find yours at https://airtable.com/api; select your base, and the baseID should be listed.
 - `SLACK_WORKFLOW_URL` : the url from the first slack workflow as mentioned below
+
+## `regions` array struct
+```js
+[
+  "Region1",
+  "Region2",
+  "Region3",
+]
+```
+You can edit this on lines 17-24 of `index.js`.
 
 ## `users` array struct
 ```js
@@ -52,14 +63,14 @@ async function getUsers(region) {
 The base MUST be formatted with the following columns, you can add more, but these are the bare minimum. Case-sensitive, they must be named exactly unless you change the code.
 - `Users` (table 1)
   - id (single line text)
-  - region (single select)
+  - region (single select) [must be the same regions as above]
   - address (long text)
   - likes (long text)
 - `Matching` (table 2)
   - id (single line text) [main field]
   - match (single line text)
   - regionmatch (checkbox)
-  - region (single select)
+  - region (single select) [must be the same regions as the `Users` table field: region]
   - sent (lookup) [configures to `link` and `check`]
   - Remind Them Button (button) [runs script below]
   - link (linked to another record) [link this to the `checked` table, it can and should be a hidden field]
