@@ -50,6 +50,7 @@ async function getUsers(region) {
       region: user.fields.region,
       address: user.fields.address,
       likes: user.fields.likes,
+      dislikes: user.fields.dislikes,
     });
   });
   return (users);
@@ -83,6 +84,7 @@ function PairUsers(users) {
         recordId: matchRecord.id,
         likes: user_2.likes,
         userIdLiteral: user_1.id,
+        dislikes: user_2.dislikes
       },
     });
   });
