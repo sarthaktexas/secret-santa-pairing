@@ -5,7 +5,7 @@ This grabs data from an airtable form and pairs every person with somebody.
 - `AIRTABLE_API_KEY` : your airtable api key, find yours in the settings tab in airtable.
 
 ## `users` array struct
-```json
+```js
 [
     {
         id: String, // Slack ID
