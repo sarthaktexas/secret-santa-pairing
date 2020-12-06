@@ -79,18 +79,23 @@ console.log(`Sent a reminder to ${record.name}`);
 
 ## Slack Workflows
 ### Slack Workflow 1
-!()[https://cloud-3i2m5av4l.vercel.app/0image.png]
-!()[https://cloud-58q5567c4.vercel.app/0image.png]
-!()[https://cloud-4zvp7b9zc.vercel.app/0image.png]
+![](https://cloud-3i2m5av4l.vercel.app/0image.png)
+![](https://cloud-58q5567c4.vercel.app/0image.png)
+![](https://cloud-4zvp7b9zc.vercel.app/0image.png)
+
 > Create a button which moves on to a Zapier Integration that creates a new airtable record using the following config:
-!()[https://cloud-bij5rjs4n.vercel.app/0image.png]
+
+![](https://cloud-bij5rjs4n.vercel.app/0image.png)
 
 ### Slack Workflow 2
 This one sends a user a reminder.
-!()[https://cloud-ce5kanve2.vercel.app/0image.png]
-!()[https://cloud-odcyjf21x.vercel.app/0image.png]
+![](https://cloud-ce5kanve2.vercel.app/0image.png)
+![](https://cloud-odcyjf21x.vercel.app/0image.png)
+
 > Create a button which moves on to a Zapier Integration that creates a new airtable record using the following config:
-!()[https://cloud-bij5rjs4n.vercel.app/0image.png]
+
+![](https://cloud-bij5rjs4n.vercel.app/0image.png)
+
 Create an issue if you have any trouble creating these!
 
 &copy; Sarthak Mohanty 2020. Licensed under [MIT](LICENSE), see [LICENSE](LICENSE) for more info.
