@@ -39,7 +39,6 @@ async function getUsers(region) {
   const users = [];
   userRes.forEach(user => {
     users.push({
-      email: user.fields.email,
       id: user.fields.id,
       region: user.fields.region,
       address: user.fields.address,
