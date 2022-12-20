@@ -108,6 +108,7 @@ console.log(`Sent a reminder to ${record.name}`);
 > Create a button which moves on to a Zapier Integration that creates a new airtable record using the following config:
 
 ![](https://cloud-bij5rjs4n.vercel.app/0image.png)
+> Now the integration asks for table name. Use the `Checked` table.
 
 ### Slack Workflow 2
 This one sends a user a reminder.
@@ -117,6 +118,7 @@ This one sends a user a reminder.
 > Create a button which moves on to a Zapier Integration that creates a new airtable record using the following config:
 
 ![](https://cloud-bij5rjs4n.vercel.app/0image.png)
+> Now the integration asks for table name. Use the `Checked` table.
 
 Create an issue if you have any trouble creating these!
 
